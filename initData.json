@@ -1,0 +1,117 @@
+{
+    "success": true,
+    "giftList": [{
+        "id": 598,
+        "name": "1%加息券",
+        "logo": "//bxwd-img.oss-cn-hangzhou.aliyuncs.com/upload/image/1712/2245147e-3eaa-4da0-87ed-174a440bf30d.png",
+        "type": "voucher"
+    }, {
+        "id": 599,
+        "name": "2%加息券",
+        "logo": "//bxwd-img.oss-cn-hangzhou.aliyuncs.com/upload/image/1712/4679ea5b-99d2-4f70-9c6d-65dcc230049e.png",
+        "type": "voucher"
+    }, {
+        "id": 600,
+        "name": "50元话费",
+        "logo": "//bxwd-img.oss-cn-hangzhou.aliyuncs.com/upload/image/1712/835748ad-6c7f-4f4a-81e4-607e4f1091ef.png",
+        "type": "traffic"
+    }, {
+        "id": 601,
+        "name": "100元话费",
+        "logo": "//bxwd-img.oss-cn-hangzhou.aliyuncs.com/upload/image/1712/eda42975-75a1-4fce-a9a4-1d464223239a.png",
+        "type": "traffic"
+    }, {
+        "id": 603,
+        "name": "500元京东卡",
+        "logo": "//bxwd-img.oss-cn-hangzhou.aliyuncs.com/upload/image/1712/7044f95a-2a96-4665-a821-961323811a07.png",
+        "type": "goods"
+    }, {
+        "id": 602,
+        "name": "1000元京东卡",
+        "logo": "//bxwd-img.oss-cn-hangzhou.aliyuncs.com/upload/image/1712/c04a51d8-e0a4-44c5-8463-20c455e739b8.png",
+        "type": "goods"
+    }, {
+        "id": 604,
+        "name": "iPhoneX*256g",
+        "logo": "//bxwd-img.oss-cn-hangzhou.aliyuncs.com/upload/image/1712/ec0c3c56-0349-4bfe-b6d7-2e78b8b9282b.png",
+        "type": "goods"
+    }],
+    "lucky": {
+        "envelope": [{
+            "amount": 10.00,
+            "useLimitMoney": 5000.00,
+            "useLimitMonth": "30"
+        }, {
+            "amount": 30.00,
+            "useLimitMoney": 10000.00,
+            "useLimitMonth": "60"
+        }, {
+            "amount": 60.00,
+            "useLimitMoney": 20000.00,
+            "useLimitMonth": "60"
+        }, {
+            "amount": 80.00,
+            "useLimitMoney": 10000.00,
+            "useLimitMonth": "120"
+        }],
+        "increases": {
+            "amount": 3.50,
+            "useLimitMoney": 100.00,
+            "useLimitMonth": "0"
+        }
+    },
+    "investPeople": [{
+        "username": "邀先生",
+        "phone": "130 **** 0788",
+        "num": "3",
+        "no": 1
+    }, {
+        "username": "131 **** 0004",
+        "phone": "131 **** 0004",
+        "num": "3",
+        "no": 2
+    }],
+    "investMoney": [{
+        "username": "仲先生",
+        "phone": "131 **** 3914",
+        "memberId": 999977,
+        "money": 3318556.00,
+        "no": 1
+    }, {
+        "username": "邀先生",
+        "phone": "130 **** 0788",
+        "memberId": 1000200,
+        "money": 480005.00,
+        "no": 2
+    }, {
+        "username": "131 **** 0008",
+        "phone": "131 **** 0008",
+        "memberId": 1000110,
+        "money": 209000.00,
+        "no": 3
+    }, {
+        "username": "131 **** 0004",
+        "phone": "131 **** 0004",
+        "memberId": 1000106,
+        "money": 192400.00,
+        "no": 4
+    }, {
+        "username": "130 **** 0001",
+        "phone": "130 **** 0001",
+        "memberId": 997915,
+        "money": 146800.00,
+        "no": 5
+    }, {
+        "username": "ti*****an",
+        "phone": "189 **** 6163",
+        "memberId": 1000103,
+        "money": 72100.00,
+        "no": 6
+    }, {
+        "username": "zh*****ng",
+        "phone": "131 **** 3913",
+        "memberId": 997909,
+        "money": 60100.00,
+        "no": 7
+    }]
+}

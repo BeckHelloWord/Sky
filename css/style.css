@@ -1,0 +1,615 @@
+@charset "UTF-8";
+i, u, b {
+  font-style: normal !important;
+}
+
+div, p, h3, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: '微软雅黑';
+  color: white;
+}
+
+.wrapper {
+  background: url("../images/pc/bg.jpg");
+}
+
+.banner {
+  height: 927px;
+  min-width: 1200px;
+  background: url("../images/pc/banner.png") center no-repeat;
+}
+
+.main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main span {
+  color: #ffe82c;
+}
+
+.main .sky {
+  height: 984px;
+  padding-top: 18px;
+  position: relative;
+  background: url("../images/pc/holder.png") center 436px no-repeat;
+}
+
+.main .sky img {
+  position: absolute;
+  top: 370px;
+  left: 533px;
+  cursor: pointer;
+}
+
+.main .sky:before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 436px;
+  background-color: #febf00;
+  right: 89px;
+  top: 0;
+}
+
+.main .sky .record {
+  cursor: pointer;
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  text-decoration: underline;
+  top: -55px;
+  right: 240px;
+}
+
+.main .sky .z_record {
+  font-size: 18px;
+  color: white;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 96px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.main .sky .z_record span {
+  cursor: pointer;
+  color: white;
+}
+
+.main .sky .description {
+  margin: 0 auto;
+  width: 878px;
+  background-color: #c8181c;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  line-height: 28px;
+  padding: 10px;
+  position: relative;
+  z-index: 100;
+}
+
+.main .sky .description p {
+  color: white;
+}
+
+.main .sky .description span {
+  color: #ffe82c;
+}
+
+.main .sky .description ul {
+  padding-left: 20px;
+}
+
+.main .sky .description ul li {
+  list-style: disc;
+  color: #ff6066;
+}
+
+.main .sky .ie8 {
+  position: absolute;
+  top: 180px;
+  left: 282px;
+}
+
+.main .sky .invite {
+  position: absolute;
+  bottom: 0;
+  height: 125px;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.main .sky .invite:before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 125px;
+  background-color: #febf00;
+  left: 193px;
+  top: 0;
+}
+
+.main .sky .invite a {
+  width: 335px;
+  height: 70px;
+  background-color: #febf00;
+  display: block;
+  border-radius: 5px;
+  color: #d82126;
+  text-align: center;
+  font-size: 30px;
+  line-height: 70px;
+  font-weight: bold;
+  margin: 0 auto;
+  border-bottom: 5px solid #eba000;
+}
+
+.main .number6 {
+  height: 950px;
+  background: url("../images/pc/title2.png") top center no-repeat;
+  padding-top: 129px;
+}
+
+.main .number6 .content {
+  background: url("../images/pc/boxbg.png") center top repeat-y;
+  height: 821px;
+  font-size: 22px;
+}
+
+.main .number6 .content .title {
+  text-align: center;
+  text-align: center;
+}
+
+.main .number6 .content .title h3 {
+  font-size: 28px;
+  color: #ffe82c;
+  font-weight: bold;
+}
+
+.main .number6 .content .title p {
+  color: white;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+.main .number6 .content .container1 p {
+  line-height: 75px;
+}
+
+.main .number6 .content .container1 .packet6 {
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.main .number6 .content .container1 .packet6 p {
+  position: absolute;
+  font-size: 100px;
+  color: #e71c18;
+  left: 360px;
+  line-height: 100px;
+  top: 45px;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.main .number6 .content .container1 .packet6 p i {
+  float: left;
+}
+
+.main .number6 .content .container1 .packet6 p span {
+  font-size: 53px;
+  color: #e71c18;
+  font-weight: bold;
+}
+
+.main .number6 .content .container1 .second {
+  padding: 10px 24px;
+}
+
+.main .number6 .content .container1 .second ul li {
+  position: relative;
+  text-align: center;
+  float: left;
+  width: 25%;
+}
+
+.main .number6 .content .container1 .second ul li span {
+  position: absolute;
+  font-size: 53px;
+  color: #fec80d;
+  top: 43px;
+  left: 70px;
+}
+
+.main .ranking {
+  height: 1336px;
+  background: url("../images/pc/title3.png") top center no-repeat;
+  padding-top: 197px;
+}
+
+.main .ranking .content {
+  background: url("../images/pc/boxbg.png") center top repeat-y;
+  height: 1139px;
+}
+
+.main .ranking .content .left, .main .ranking .content .right {
+  width: 406px;
+  color: #b64d27;
+}
+
+.main .ranking .content .left .title, .main .ranking .content .right .title {
+  height: 160px;
+}
+
+.main .ranking .content .left .title h3, .main .ranking .content .right .title h3 {
+  font-size: 28px;
+  color: #ffe82c;
+  text-align: center;
+  line-height: 80px;
+}
+
+.main .ranking .content .left .title p, .main .ranking .content .right .title p {
+  font-size: 16px;
+  color: white;
+  line-height: 25px;
+}
+
+.main .ranking .content .left thead, .main .ranking .content .right thead {
+  background-color: #ffb933;
+}
+
+.main .ranking .content .left th + th, .main .ranking .content .right th + th {
+  border-left: 1px solid #ffc557;
+}
+
+.main .ranking .content .left td + td, .main .ranking .content .right td + td {
+  border-left: 1px solid #ffdb8f;
+}
+
+.main .ranking .content .left th, .main .ranking .content .right th {
+  font-weight: normal;
+  font-size: 18px;
+  height: 60px;
+}
+
+.main .ranking .content .left td, .main .ranking .content .right td {
+  font-size: 16px;
+  height: 40px;
+}
+
+.main .ranking .content .left td div, .main .ranking .content .right td div {
+  height: 100%;
+}
+
+.main .ranking .content .left tbody, .main .ranking .content .right tbody {
+  text-align: center;
+}
+
+.main .ranking .content .left tbody tr:nth-child(2n+1), .main .ranking .content .right tbody tr:nth-child(2n+1) {
+  background: #ffd57c;
+}
+
+.main .ranking .content .left tbody tr:nth-child(2n), .main .ranking .content .right tbody tr:nth-child(2n) {
+  background: #ffcb5d;
+}
+
+.main .ranking .content .left .rake, .main .ranking .content .right .rake {
+  margin-bottom: 40px;
+}
+
+.main .ranking .content .left .rake tbody tr:nth-child(1) td:nth-child(1), .main .ranking .content .right .rake tbody tr:nth-child(1) td:nth-child(1) {
+  position: relative;
+}
+
+.main .ranking .content .left .rake tbody tr:nth-child(1) td:nth-child(1):after, .main .ranking .content .right .rake tbody tr:nth-child(1) td:nth-child(1):after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: url("../images/pc/first.png") center no-repeat;
+}
+
+.main .ranking .content .left .rake tbody tr:nth-child(2) td:nth-child(1), .main .ranking .content .right .rake tbody tr:nth-child(2) td:nth-child(1) {
+  position: relative;
+}
+
+.main .ranking .content .left .rake tbody tr:nth-child(2) td:nth-child(1):after, .main .ranking .content .right .rake tbody tr:nth-child(2) td:nth-child(1):after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: url("../images/pc/second.png") center no-repeat;
+}
+
+.main .ranking .content .left .rake tbody tr:nth-child(3) td:nth-child(1), .main .ranking .content .right .rake tbody tr:nth-child(3) td:nth-child(1) {
+  position: relative;
+}
+
+.main .ranking .content .left .rake tbody tr:nth-child(3) td:nth-child(1):after, .main .ranking .content .right .rake tbody tr:nth-child(3) td:nth-child(1):after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: url("../images/pc/third.png") center no-repeat;
+}
+
+.main .ranking .content .attention {
+  float: left;
+  margin-top: 30px;
+  color: #f39698;
+  font-size: 16px;
+}
+
+.main .ranking .content .invite {
+  padding-top: 35px;
+}
+
+.main .ranking .content .invite a {
+  width: 335px;
+  height: 70px;
+  background-color: #febf00;
+  display: block;
+  border-radius: 5px;
+  color: #d82126;
+  text-align: center;
+  font-size: 30px;
+  line-height: 70px;
+  font-weight: bold;
+  margin: 0 auto;
+  border-bottom: 5px solid #eba000;
+}
+
+.main .rule {
+  background: url("../images/pc/rule.png") top center no-repeat;
+  padding-top: 140px;
+}
+
+.main .rule .title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+}
+
+.main .rule .content {
+  background: url("../images/pc/boxbg.png") center top repeat-y;
+  height: 530px;
+}
+
+.main .rule .content .container1 {
+  padding: 32px;
+}
+
+.main .rule .content ul li {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.main .tip {
+  background: url("../images/pc/bottom.png") top center no-repeat;
+  text-align: center;
+  font-size: 16px;
+  color: #ff767b;
+  height: 90px;
+  padding-top: 40px;
+}
+
+.container1 {
+  margin: 0 auto;
+  width: 950px;
+  border: 5px solid #fc474d;
+  border-radius: 15px;
+  background-color: #d92227;
+  padding: 20px;
+}
+
+.container2 {
+  background-color: #eb2e33;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+}
+
+.fs18 {
+  font-size: 18px;
+}
+
+.clearfix:after, .clearfix::before {
+  content: '';
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.t_c {
+  text-align: center;
+}
+
+.underline {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+canvas {
+  position: absolute;
+  left: 250px;
+  top: 50px;
+}
+
+.getRecommend {
+  width: 725px !important;
+}
+
+.self, .getRecommend {
+  min-width: 570px;
+}
+
+.self div.layui-layer-title, .getRecommend div.layui-layer-title {
+  font-size: 26px;
+  color: #666;
+  line-height: 80px;
+  height: 80px;
+  text-align: center;
+  padding: 0;
+}
+
+.self span.layui-layer-setwin, .getRecommend span.layui-layer-setwin {
+  top: 33px;
+}
+
+.self .layui-layer-setwin .layui-layer-close1, .getRecommend .layui-layer-setwin .layui-layer-close1 {
+  opacity: 0.5;
+}
+
+.self .layui-layer-btn, .getRecommend .layui-layer-btn {
+  text-align: center;
+}
+
+.self .layui-layer-btn a, .getRecommend .layui-layer-btn a {
+  box-sizing: border-box;
+  width: 407px;
+  height: 70px;
+  color: white;
+  font-size: 24px;
+  line-height: 70px;
+  background: #2d449f;
+  border: none;
+  margin: 0;
+  border-radius: 3px;
+}
+
+.self div.layui-layer-content, .getRecommend div.layui-layer-content {
+  padding: 40px;
+}
+
+.self table, .getRecommend table {
+  color: #b64d27;
+}
+
+.self table thead, .getRecommend table thead {
+  background-color: #ffb933;
+}
+
+.self table th + th, .getRecommend table th + th {
+  border-left: 1px solid #ffc557;
+}
+
+.self table td + td, .getRecommend table td + td {
+  border-left: 1px solid #ffdb8f;
+}
+
+.self table th, .getRecommend table th {
+  font-weight: normal;
+  font-size: 18px;
+  height: 60px;
+}
+
+.self table td, .getRecommend table td {
+  font-size: 16px;
+  height: 40px;
+}
+
+.self table td div, .getRecommend table td div {
+  height: 100%;
+}
+
+.self table tbody, .getRecommend table tbody {
+  text-align: center;
+}
+
+.self table tbody tr:nth-child(2n+1), .getRecommend table tbody tr:nth-child(2n+1) {
+  background: #ffd57c;
+}
+
+.self table tbody tr:nth-child(2n), .getRecommend table tbody tr:nth-child(2n) {
+  background: #ffcb5d;
+}
+
+.self ul li, .getRecommend ul li {
+  color: #666;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.self ul li span, .getRecommend ul li span {
+  color: #ecb81c;
+}
+
+#exchange {
+  width: 840px;
+  font-size: 24px;
+  display: none;
+  margin-left: -50px;
+}
+
+#exchange h3 {
+  color: #ecb81c;
+  font-size: 34px;
+  line-height: 120px;
+  background-color: #fff7de;
+  text-align: center;
+}
+
+#exchange div {
+  margin: 50px 0;
+  padding-left: 50px;
+  text-align: center;
+}
+
+#exchange div label {
+  color: #666;
+  width: 130px;
+  display: inline-block;
+  text-align: right;
+}
+
+#exchange div input {
+  padding: 8px;
+  width: 550px;
+  border: 1px solid #ccc;
+  color: #666;
+}
+
+#exchange div input.none {
+  border: none;
+}
+
+#exchange div button {
+  border: none;
+  width: 240px;
+  background-color: #2d449f;
+  line-height: 75px;
+  color: white;
+  margin-left: -50px;
+}
+
+.noActivity {
+  top: 180px !important;
+  left: 286px !important;
+}

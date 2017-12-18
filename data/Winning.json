@@ -1,0 +1,12 @@
+{
+    "success":true,
+    "isLogin":true,
+    "message":"aaaaaa",
+    "winGifts":[
+        {"seq":"1","giftName":"aaaaaa","date":"2017-12-01"},
+        {"seq":"2","giftName":"aaaaaa","date":"2017-12-01"},
+        {"seq":"3","giftName":"aaaaaa","date":"2017-12-01"},
+        {"seq":"4","giftName":"aaaaaa","date":"2017-12-01"},
+        {"seq":"5","giftName":"aaaaaa","date":"2017-12-01"}
+    ]
+}

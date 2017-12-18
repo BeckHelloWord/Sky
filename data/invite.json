@@ -1,0 +1,12 @@
+{
+    "success":true,
+    "isLogin":true,
+    "message":"aaaaaa",
+    "recommends":[
+        {"seq":"1","username":"aaaaaa","phone":"13000000000","recommendTime":"2017-12-01","money":11111111},
+        {"seq":"2","username":"aaaaaa","phone":"13000000000","recommendTime":"2017-12-01","money":11111111},
+        {"seq":"3","username":"aaaaaa","phone":"13000000000","recommendTime":"2017-12-01","money":11111111},
+        {"seq":"4","username":"aaaaaa","phone":"13000000000","recommendTime":"2017-12-01","money":11111111},
+        {"seq":"5","username":"aaaaaa","phone":"13000000000","recommendTime":"2017-12-01","money":11111111}
+    ]
+}

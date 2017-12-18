@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="Keywords" content="狂欢嘉年华 岁末壕礼全带走">
+    <meta name="Description" content="狂欢嘉年 华岁末壕礼全带走">
+    <title>狂欢嘉年华 岁末壕礼全带走</title>
+    <!-- <link rel="stylesheet" href="https://www.bxjr.com/css/css201610/reset.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+</head>
+
+<body class="mobilePage">
+    <!-- banner -->
+    <img src="./images/mobile/banner.jpg" />
+    <!-- 预加载cage -->
+    <img src="./images/mobile/cage.png" alt="" style="display:none;">
+    <!-- 抽奖区域 -->
+    <div class="lottery-wrap">
+        <div class="lottery-rule">
+            <ul>
+                <li>活动期间每邀请一位好友<span class="txt-voucher">注册且首投</span>可获得一次抽奖机会，好友投资<span class="txt-voucher">每满10000元</span>可增加一次抽奖机会，每邀请一位好友最多可得抽奖机会5次，多邀多得。</li>
+                <li>例：王先生活动期间邀请好友A注册且投资100000元，邀请好友B注册且投资30000元，则王先生可获得抽奖机会9次。</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 转盘区域 -->
+    <div class="ferris-wheel">
+        <div class="sky-demo">
+            <img src="./images/mobile/noA.png" alt="" width="100%" class="noActivity" style="display:none;">
+            <canvas id="sky" width="750px" height="880px" style="width:375px;height:440px">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+            <img src="./images/mobile/btn-lottery.png" class="btn-lottery J-btn-Start" />
+        </div>
+    </div>
+    <p class="txt-Winning">
+        <span class="J-winning" data-key="J-winning">我的中奖纪录</span>
+        <span class="J-invite" data-key="J-invite">我的邀请记录</span>
+    </p>
+    <a href="/center/invite/index" class="btn-invite appUrl" data-app-url="baoxiang://APPInviteFriendPage">立即邀请</a>
+    <div class="description" id="template">
+        <!-- arttemplate填充区域 -->
+    </div>
+    <p class="txt-tips txt-risk">市场有风险 投资需谨慎</p>
+
+    <div class="bomb J-address-bomb address-bomb" style="display:none">
+        <label>
+            <span>收货人:</span>
+            <span class="J-userName"></span>
+        </label>
+        <label>
+            <span>联系电话:</span>
+            <span class="J-phone"></span>
+        </label>
+        <label>
+            <span>地址:</span>
+            <!-- <input type="text" maxlength="25"/> -->
+            <input class="J-address" type="text" placeholder="为确保您能收到，请填写详细地址" id="address">
+        </label>
+        <button class="J-submit">提交</button>
+    </div>
+</body>
+
+<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+<script src="./js/artTemplate.js"></script>
+<script type="text/javascript" src="./js/mobile_rotate.js"></script>
+<script type="text/javascript" src="./js/mobile.js"></script>
+<script type="text/javascript" src="./js/layer/layer.js"></script>
+<script type="text/javascript" src="./js/wechatLink-1.1.js"></script>
+<script type="text/javascript" src="./js/jQuery.link.js"></script>
+
+<!-- 排行榜模板 开始 -->
+<script id="artDom" type="text/html">
+    <img src="./images/mobile/luckysix.png" />
+    <!-- 幸运数字6 -->
+    <div class="carnival-rule">
+        <div class="rule-desc">
+            <p class="desc-title">邀请第六位可以获得大奖！</p>
+            <p>活动期间邀请前五位好友注册且首投，邀请人均有随机红包赠送，邀请第六位注册且首投的，邀请人与被邀请人双方均可获得<span class="txt-voucher">{{lucky.increases.amount}}%加息券</span>！</p>
+        </div>
+        <div class="carnival-con">
+            <div class="carnival-txt">
+                <div class="voucher">
+                    <p>1、第六位好友成功首投后，邀请人与被邀请人可同时获得<span class="txt-voucher">{{lucky.increases.amount}}%加息券</span>！</p>
+                    <div class="img-voucher"><strong>{{lucky.increases.amount}}<span>%</span></strong>
+                    </div>
+
+                </div>
+                <div class="red-package">
+                    <p>2、其余可随机获得</p>
+                    <ul class="red-list clearfix">
+                        {{each lucky.envelope as val index }}
+                        <li>
+                            <div class="red-wrap">
+                                <p class="red-money">
+                                    <span>￥</span>{{val.amount}}</p>
+                                <p>红包</p>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <p class="txt-Winning"><span class="J-redPackage" data-key="J-redPackage">红包使用条件</span></p>
+            </div>
+        </div>
+    </div>
+    <img src="./images/mobile/welfare.png" />
+    <!-- 福利排行榜 -->
+    <div class="carnival-rule">
+        <div class="carnival-con">
+            <div class="carnival-txt">
+                <div class="invest-list">
+                    <!-- 邀请好友投资金额排行榜 -->
+                    <div class="rule-desc">
+                        <p class="desc-title">邀请好友投资金额排行榜</p>
+                        <p>活动期间内好友投资金额大于50000即有机会参与本次排名。排名以好友投资金额为准，如有并列，以达成此金额的时间先后顺序为准。</p>
+                    </div>
+                    <table class="seniority">
+                        <tr>
+                            <th width="12%">排名</th>
+                            <th width="25%">用户名</th>
+                            <th width="40%">手机号</th>
+                            <th>投资金额</th>
+                        </tr>
+                        {{each investMoney as item index}}
+                        <tr>
+                            <td>
+                                {{if item.no==1||item.no==2||item.no==3}}
+                                <i class="ranking ranking-{{item.no}}">{{item.no}}</i>
+                                {{else}}
+                                {{item.no}}
+                                {{/if}}
+                            </td>
+                            <td>{{item.username}}</td>
+                            <td>{{item.phone}}</td>
+                            <td>{{item.money}}</td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                    <table class="prize">
+                        <tr>
+                            <th>投资人数排名</th>
+                            <th>奖品</th>
+                        </tr>
+                        <tr>
+                            <td>第一名</td>
+                            <td>2000元京东卡</td>
+                        </tr>
+                        <tr>
+                            <td>第二名</td>
+                            <td>1000元京东卡</td>
+                        </tr>
+                        <tr>
+                            <td>第三名</td>
+                            <td>500京东卡</td>
+                        </tr>
+                    </table>
+                    <!-- 邀请好友投资人数排行榜 -->
+                    <div class="rule-desc">
+                        <p class="desc-title">邀请好友投资人数排行榜</p>
+                        <p>排名以活动期间邀请有效好友人数为准（有效好友指注册且投资的好友），如有并列，以好友投资金额高低为准。</p>
+                    </div>
+                    <table class="seniority">
+                        <tr>
+                            <th  width="12%">排名</th>
+                            <th width="25%">用户名</th>
+                            <th width="40%">手机号</th>
+                            <th>邀请人数</th>
+                        </tr>
+
+                        {{each investPeople as item index}}
+                        <tr>
+                            <td>
+                                {{if item.no==1||item.no==2||item.no==3}}
+                                <i class="ranking ranking-{{item.no}}">{{item.no}}</i>
+                                {{else}}
+                                {{item.no}}
+                                {{/if}}
+                            </td>
+                            <td>{{item.username}}</td>
+                            <td>{{item.phone}}</td>
+                            <td>{{item.num}}</td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                    <table class="prize">
+                        <tr>
+                            <th>投资人数排名</th>
+                            <th>奖品</th>
+                        </tr>
+                        <tr>
+                            <td>第一名</td>
+                            <td>500京东卡</td>
+                        </tr>
+                        <tr>
+                            <td>第二名</td>
+                            <td>300京东卡</td>
+                        </tr>
+                        <tr>
+                            <td>第三名</td>
+                            <td>100京东卡</td>
+                        </tr>
+                    </table>
+                    <p class="txt-tips">注：所有排名均以活动结束时最终结果为准，实时排名仅供参考。</p>
+                </div>
+            </div>
+        </div>
+        <a href="/center/invite/index" class="btn-invite appUrl" data-app-url="baoxiang://APPInviteFriendPage">立即邀请</a>
+    </div>
+    <img src="./images/mobile/rule.png" />
+    <!-- 活动规则 -->
+    <div class="carnival-rule">
+        <p class="txt-rule">
+            <i></i>活动规则
+            <i></i>
+        </p>
+        <div class="carnival-con">
+            <div class="carnival-txt">
+                <ul class="rule-list">
+                        <li>1、本次活动平台所有注册且实名的个人用户均可参与；</li>
+                        <li>2、参与本次活动的用户可同时享受平台邀请好友奖励，具体规则见-<a href="/center/invite/index">“我的账户”-“邀请好友”</a>；</li>
+                        <li>3、在活动期间内每邀请一位好友注册且首投，邀请人即可获得一次抽奖机会；好友投资金额满10000元，可再得抽奖机会一次，每邀请一位好友最多可得抽奖机会5次，依次类推，邀请越多，抽奖机会越多；</li>
+                        <li>4、本活动话费奖励将实时充值到用户参与活动的注册手机号中(具体以运营商到账时间为准）;京东卡将以电子码的形式发放，卡券密码将在活动结束后的30个工作日内发放至用户的消息中心；加息券将实时发放至用户账户，具体使用规则详见个人中心—我的红包；</li>
+                        <li>5、实物奖品均不提供发票，如遇到商品缺货等问题，客服将与您沟通协商换取同等价值奖品，所有实物奖品将在活动结束后30个工作日内发货，请于活动结束前完善收货地址，若活动结束后仍未填写地址且客服于7个工作日内无法联系到用户，则视为自动放弃奖励；</li>
+                        <li>6、本次活动所邀客户投资月月丰、添添金、个人周转贷及债权转让的标的不参与奖励与排名；</li>
+                        <li>7、如对本次活动有任何疑问，请拨打客服热线<a href="tel:400-885-1100">400-885-1100</a>。</li>
+
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--红包使用条件 弹出框 开始 -->
+    <div class="bomb J-redPackage-bomb" style="display:none;">
+            <ul class="envelope-rule">
+                <li>{{lucky.increases.amount}}%加息券：满
+                            <span>{{lucky.increases.useLimitMoney}}</span>元可以使用，{{lucky.increases.useLimitMonth}}天及以上标期可使用</li>
+                {{each lucky.envelope as item index}}
+                <li>{{item.amount}}元红包：满
+                    <span>{{item.useLimitMoney}}</span>元可以使用，{{item.useLimitMonth}}天及以上标期可使用</li>
+                {{/each}}
+            </ul>
+            <button class="btn-closed">知道了</button>
+        </div>
+        <!--红包使用条件 弹出框 结束 -->
+</script>
+<!-- 排行榜模板 结束 -->
+
+<!--我的邀请记录 弹出框 开始 -->
+<script id="invite-artDom" type="text/html">
+    <div class="bomb J-invite-bomb" style="display:none;">
+
+        <table class="seniority">
+                <tr>
+                    <th width="12%">序号</th>
+                    <th width="15%">用户名</th>
+                    <th>手机号码</th>
+                    <th>注册时间</th>
+                    <th>投资金额</th>
+                </tr>
+                {{each recommends as item index}}
+                <tr>
+                    <td>{{item.seq}}</td>
+                    <td>{{item.username}}</td>
+                    <td>{{item.phone}}</td>
+                    <td>{{item.recommendTime}}</td>
+                    <td>{{item.money}}</td>
+                </tr>
+                {{/each}}
+            </table>
+            <button class="btn-closed">知道了</button>
+        </div>
+</script>
+<!--我的邀请记录 弹出框 结束 -->
+
+
+<!--我的中奖纪录 弹出框 开始 -->
+<script id="winning-artDom" type="text/html">
+    <div class="bomb J-winning-bomb" style="display:none;">
+        <table class="seniority">
+            <tr>
+                <th>序号</th>
+                <th>奖品</th>
+                <th>中奖时间</th>
+            </tr>
+            {{ each winGifts as item index }}
+            <tr>
+                <td>{{item.seq}}</td>
+                <td>{{item.giftName}}</td>
+                <td>{{item.date}}</td>
+            </tr>
+            {{/each}}
+        </table>
+        <button class="btn-closed">知道了</button>
+    </div>
+</script>
+<!--我的中奖纪录 弹出框 结束 -->
+
+
+<script>
+    $(function () {
+        // $('#sky').css({ "width": window.innerWidth })
+        if (window.innerWidth == 320) {
+            //iPhone 4&5
+            $('#sky').css({ "width": '305px', "height": "370px" });
+        } else if (window.innerWidth == 414) {
+            //iPhone 6P
+            $('.sky-demo').css({ 'top': '-8%' });
+        }
+
+        carnival.init();
+    })
+
+
+    // 分享开始
+    var wechatShare = new WeChatShare();
+    var shareData = {
+        shareConfig: {
+            title: "幸福摩天轮，壕礼全带走",
+            desc: "邀请好友玩赚摩天轮，iPhoneX、千元京东卡、3%加息券等壕礼等你来抽哟！",
+            link: location.href,
+            imgUrl: "http://bxwd-img.oss-cn-hangzhou.aliyuncs.com/upload/image/1712/513d9061-935e-4a37-84dc-c42bef8ff795.png"
+        },
+        menuList: {
+            menuList: [
+                'menuItem:readMode', // 阅读模式
+                'menuItem:share:timeline', // 分享到朋友圈
+                'menuItem:copyUrl', // 复制链接
+                'menuItem:share:appMessage'
+            ]
+        },
+        callback: function () { }
+    };
+    wechatShare.init(shareData);
+    // 分享结束
+</script>
+<div style="display:none">
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var s = document.getElementsByTagName("script")[0];
+            //百度统计
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9d8516b072af1baf608b889209361cbe";
+            s.parentNode.insertBefore(hm, s);
+            //友盟统计
+            var ym = document.createElement("script");
+            ym.src = "//s4.cnzz.com/z_stat.php?id=1258672745";
+            s.parentNode.insertBefore(ym, s);
+        })();
+    </script>
+</div>
+
+</html>

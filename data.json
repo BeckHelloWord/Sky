@@ -1,0 +1,13 @@
+{
+    "success":true,
+    "isLogin":true,
+    "message":"213",
+    "recommends":[],
+    "giftId":599,
+    "giftLogo":"//bxwd-img.oss-cn-hangzhou.aliyuncs.com/upload/image/1712/4679ea5b-99d2-4f70-9c6d-65dcc230049e.png"
+    ,
+    "giftName":"2%加息券",
+    "hasGift":true,
+    "type":"goods",
+    "address":"1234"
+}
